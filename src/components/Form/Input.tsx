@@ -2,13 +2,13 @@ import { FormControl, FormLabel, Input as ChakraInput, InputProps as ChakraInput
 
 interface InputProps extends ChakraInputProps {
     name: string;
-    label?: string
+    label?: string;
 } 
 
 export function Input({name, label, ...rest}: InputProps) {
     return (
         <FormControl>
-      { !!label &&  <FormLabel htmlFor={name}>E-mail</FormLabel>}
+      { !!label &&  <FormLabel htmlFor={name}>{label}</FormLabel>}
       <ChakraInput 
       name={name}
       id={name}
